@@ -94,6 +94,7 @@ h1 em{font-style:normal;color:var(--glass)}
 .placard h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;line-height:1.2;margin:2px 0 0;min-width:0;text-wrap:balance}
 .price{font-family:var(--mono);font-weight:500;font-size:1.05rem;align-self:end;font-variant-numeric:tabular-nums;white-space:nowrap}
 .medium{grid-column:1/-1;font-style:italic;color:var(--muted);font-size:.92rem;margin:2px 0 0}
+.note{grid-column:1/-1;font-size:.88rem;margin:6px 0 0;padding:8px 10px;background:var(--glass-soft);color:var(--ink)}
 .inq{grid-column:1/-1;justify-self:start;margin-top:8px;font:500 .85rem var(--sans);color:var(--glass);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
 
 /* footer / contact */
@@ -133,9 +134,9 @@ footer{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacin
 
   <section class="hero">
     <div>
-      <span class="eyebrow">Shell art by Tim · Amelia Island native</span>
-      <h1>Every piece starts on a <em>morning walk</em> down the beach.</h1>
-      <p class="lede">Tim walks the Amelia Island shoreline the way other people read the paper. The cockles, oysters, whelks and driftwood he carries home become one-of-a-kind mirrors and wall pieces, set in paint and epoxy and finished by hand.</p>
+      <span class="eyebrow">Shell art by Tim · Amelia Island, Florida</span>
+      <h1>Every piece starts with a <em>walk on the beach</em>.</h1>
+      <p class="lede">Whenever he gets the chance during the week, Tim walks the Amelia Island shoreline. The cockles, oysters, whelks and driftwood he carries home become one-of-a-kind mirrors and wall pieces, set in paint and epoxy and finished by hand.</p>
       <div class="hero-cta">
         <a class="btn" href="#collection">See the collection</a>
         <a class="btn ghost" href="#contact">Ask about a piece</a>
@@ -154,9 +155,9 @@ footer{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacin
     </figure>
     <div class="body">
       <span class="eyebrow">Meet the artist</span>
-      <h2 id="about">Tim, a lifelong student of this island</h2>
-      <p>Tim is a longtime local who grew up walking the streets of Fernandina, listening to the old-timers on their porches and chasing down the stories the guidebooks never bothered to tell. These days he shares those stories as the guide behind Amelia Island Tours. His art comes from the same place.</p>
-      <p>Most mornings start with a walk on the beach. Tim picks up what the tide leaves behind: cockles and coquinas, oyster clusters, a whelk that washed in whole, a horseshoe crab molt, a piece of driftwood with just the right curve. Back home, those finds become mirrors and wall pieces, set in paint and epoxy and finished with small trinkets that each carry a story. Nothing here is bought by the bag.</p>
+      <h2 id="about">Tim, a true student of this island</h2>
+      <p>Tim is a longtime local with a deep love for Northeast Florida's history. He has spent years listening to the old-timers on their porches and chasing down the stories the guidebooks never bothered to tell, and he shares those stories as the guide behind Amelia Island Tours. His art comes from the same place.</p>
+      <p>During the week, whenever he can get away, Tim heads to the beach for a walk. He picks up what the tide leaves behind: cockles and coquinas, oyster clusters, a whelk that washed in whole, a horseshoe crab molt, a piece of driftwood with just the right curve. Back home, those finds become mirrors and wall pieces, set in paint and epoxy and finished with small trinkets that each carry a story. Nothing here is bought by the bag.</p>
       <p>He builds a piece the way he tells a story about the eight flags that flew over this island: with patience, a deep love for where it came from, and usually a little humor tucked in somewhere. Ask him about any piece and he'll happily tell you which beach it came from and what he was thinking when he made it.</p>
       <ul class="materials" aria-label="Materials">
         <li>Hand-collected shells</li><li>Driftwood</li><li>Sea glass</li><li>Acrylic pour</li><li>Epoxy resin</li><li>Found trinkets</li>
@@ -218,7 +219,7 @@ footer{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacin
 <script>
 const IMG={"turtle-mirror":"/art/img/turtle-mirror.jpg","three-tides":"/art/img/three-tides.jpg","pink-tide":"/art/img/pink-tide.jpg","horseshoe":"/art/img/horseshoe.jpg","beachcomber":"/art/img/beachcomber.jpg","driftwood-mirror":"/art/img/driftwood-mirror.jpg","cross-low-tide":"/art/img/cross-low-tide.jpg","oyster-mirror":"/art/img/oyster-mirror.jpg","sacred-heart":"/art/img/sacred-heart.jpg","cockle-column":"/art/img/cockle-column.jpg","dropping-in":"/art/img/dropping-in.jpg","longhorn-cross":"/art/img/longhorn-cross.jpg","shipwreck-cove":"/art/img/shipwreck-cove.jpg"};
 const pieces=[
- {id:"AI-001",t:"Old Soul of the Tideline",img:"horseshoe",cat:["wall"],price:450,m:"Horseshoe crab molt, cockle shells and crushed shell on an acrylic pour, sealed in epoxy",alt:"Horseshoe crab on a blue resin sea with a trail of cockle shells"},
+ {id:"AI-001",t:"Old Soul of the Tideline",img:"horseshoe",cat:["wall"],price:450,note:"The horseshoe crab shell was professionally cleaned and sanitized, so it is germ-free and has no odor.",m:"Horseshoe crab molt, cockle shells and crushed shell on an acrylic pour, sealed in epoxy",alt:"Horseshoe crab on a blue resin sea with a trail of cockle shells"},
  {id:"AI-002",t:"Sea Turtle Crossing",img:"turtle-mirror",cat:["mirror"],price:450,m:"Wall mirror. Oyster, whelk, cockle and cowrie shells, hand-painted sea turtle, teal epoxy surf",alt:"Large rectangular mirror framed in shells with a teal resin wave and painted sea turtle"},
  {id:"AI-003",t:"Sacred Heart of the Shore",img:"sacred-heart",cat:["wall","faith"],price:295,m:"Sculpted flaming heart and cross, whelk and oyster shells, glass beads, sand and epoxy",alt:"Red flaming heart with crown of thorns and cross surrounded by shells"},
  {id:"AI-004",t:"Oyster Bed",img:"oyster-mirror",cat:["mirror"],price:550,m:"Wall mirror framed in layered oyster shells, sealed in clear epoxy",alt:"Square mirror with a thick frame of stacked oyster shells"},
@@ -244,6 +245,7 @@ grid.innerHTML=pieces.map((p,i)=>`
    <span class="acc">${p.id} · Amelia Island, 2026</span>
    <h3>${p.t}</h3><span class="price">${fmt(p.price)}</span>
    <p class="medium">${p.m}</p>
+   ${p.note?`<p class="note">${p.note}</p>`:""}
    <button class="inq" type="button" data-ask="${i}">Ask about this piece</button>
   </div>
  </article>`).join("");
