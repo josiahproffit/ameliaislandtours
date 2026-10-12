@@ -1,0 +1,258 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="description" content="One-of-a-kind shell mirrors and wall art by Tim, made from shells hand-collected on the beaches of Amelia Island, Florida.">
+<meta property="og:title" content="Found on Amelia | Shell Art by Tim">
+<meta property="og:description" content="Mirrors and wall pieces made from shells collected on Amelia Island beaches.">
+<meta property="og:image" content="https://ameliaislandtours.co/art/img/horseshoe.jpg">
+<meta property="og:type" content="website">
+<title>Found on Amelia | Shell Art by Tim</title>
+</head>
+<body>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Gloock&family=Karla:ital,wght@0,400;0,500;0,700;1,400&family=DM+Mono:wght@400;500&display=swap">
+<style>
+/* Layout: a museum wall. Each piece hangs on its own pale panel with a printed placard underneath; the beach story sits like a curator's wall text. */
+:root{
+  --wall:#e9ebe6;        /* cool tabby-plaster wall */
+  --panel:#f4f5f1;       /* hanging panel */
+  --ink:#1c2729;         /* deep marsh ink */
+  --muted:#5d6a68;       /* placard secondary text */
+  --rule:#cfd4cd;
+  --glass:#2f6f66;       /* sea-glass green accent */
+  --glass-soft:#d6e5e0;
+  --sand:#b08a55;        /* tideline brass, used sparingly */
+  --serif:"Gloock", "Bodoni 72", Didot, Georgia, serif;
+  --sans:"Karla", "Helvetica Neue", Arial, sans-serif;
+  --mono:"DM Mono", ui-monospace, Menlo, monospace;
+}
+@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
+  --wall:#121a1c;--panel:#1a2427;--ink:#e7ebe6;--muted:#9aa7a4;--rule:#2d3a3c;--glass:#7cc2b4;--glass-soft:#1f3633;--sand:#d2ad74;color-scheme:dark}}
+:root[data-theme="dark"]{--wall:#121a1c;--panel:#1a2427;--ink:#e7ebe6;--muted:#9aa7a4;--rule:#2d3a3c;--glass:#7cc2b4;--glass-soft:#1f3633;--sand:#d2ad74;color-scheme:dark}
+
+*{box-sizing:border-box}
+body{background:var(--wall);color:var(--ink);font-family:var(--sans);font-size:17px;line-height:1.6}
+.wrap{max-width:1180px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
+a{color:var(--glass)}
+a:focus-visible,button:focus-visible{outline:2px solid var(--glass);outline-offset:3px}
+
+/* masthead */
+.mast{display:flex;justify-content:space-between;align-items:baseline;gap:16px;flex-wrap:wrap;padding-block:22px;border-bottom:1px solid var(--rule)}
+.mark{font-family:var(--serif);font-size:1.35rem;letter-spacing:.01em}
+.coords{font-family:var(--mono);font-size:.78rem;color:var(--muted);letter-spacing:.06em}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:clamp(24px,5vw,64px);align-items:center;padding-block:clamp(36px,7vw,80px)}
+.eyebrow{font-family:var(--mono);font-size:.78rem;letter-spacing:.14em;text-transform:uppercase;color:var(--glass)}
+h1{font-family:var(--serif);font-weight:400;font-size:clamp(2.6rem,6.4vw,5rem);line-height:1.02;margin:.35em 0 .4em;text-wrap:balance}
+h1 em{font-style:normal;color:var(--glass)}
+.lede{max-width:34em;color:var(--muted);font-size:1.08rem;margin:0}
+.hero-cta{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.btn{font:500 .95rem var(--sans);padding:.75em 1.3em;border-radius:2px;border:1px solid var(--ink);background:var(--ink);color:var(--wall);text-decoration:none;cursor:pointer}
+.btn.ghost{background:transparent;color:var(--ink)}
+.btn:hover{background:var(--glass);border-color:var(--glass);color:var(--panel)}
+.hero-piece{margin:0;min-width:0}
+.hero-piece img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;background:var(--panel);box-shadow:0 30px 60px -30px rgba(20,35,35,.35)}
+.hero-piece figcaption{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-top:10px;letter-spacing:.04em}
+
+/* wall text */
+.walltext{display:grid;grid-template-columns:200px 1fr;gap:clamp(20px,4vw,56px);padding-block:clamp(36px,6vw,64px);border-top:1px solid var(--rule)}
+.walltext h2{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.15;margin:0}
+.walltext .body{min-width:0;max-width:62ch}
+.walltext p{margin:0 0 1em}
+.materials{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;padding:0;list-style:none}
+.materials li{font-family:var(--mono);font-size:.75rem;letter-spacing:.05em;padding:.35em .75em;border:1px solid var(--rule);background:var(--panel)}
+
+/* collection */
+.coll-head{display:flex;justify-content:space-between;align-items:end;gap:16px;flex-wrap:wrap;padding-block:clamp(28px,5vw,48px) 22px;border-top:1px solid var(--rule)}
+.coll-head h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.9rem,4vw,2.8rem);margin:0;line-height:1.05}
+.filters{display:flex;gap:6px;flex-wrap:wrap}
+.filters button{font:500 .85rem var(--sans);padding:.5em .95em;border:1px solid var(--rule);background:transparent;color:var(--muted);border-radius:99px;cursor:pointer}
+.filters button[aria-pressed="true"]{background:var(--ink);color:var(--wall);border-color:var(--ink)}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:clamp(20px,3vw,40px) clamp(16px,2.5vw,32px);padding-bottom:72px}
+.piece{display:flex;flex-direction:column;min-width:0}
+.piece .hang{display:block;padding:0;border:0;background:var(--panel);cursor:zoom-in;width:100%}
+.piece img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;transition:transform .5s ease}
+.piece .hang:hover img{transform:scale(1.025)}
+.placard{display:grid;grid-template-columns:1fr auto;gap:2px 16px;padding:14px 2px 0;border-top:3px solid var(--ink);margin-top:14px}
+.acc{grid-column:1/-1;font-family:var(--mono);font-size:.7rem;letter-spacing:.1em;color:var(--muted);text-transform:uppercase}
+.placard h3{font-family:var(--serif);font-weight:400;font-size:1.3rem;line-height:1.2;margin:2px 0 0;min-width:0;text-wrap:balance}
+.price{font-family:var(--mono);font-weight:500;font-size:1.05rem;align-self:end;font-variant-numeric:tabular-nums;white-space:nowrap}
+.medium{grid-column:1/-1;font-style:italic;color:var(--muted);font-size:.92rem;margin:2px 0 0}
+.inq{grid-column:1/-1;justify-self:start;margin-top:8px;font:500 .85rem var(--sans);color:var(--glass);background:none;border:0;padding:0;cursor:pointer;text-decoration:underline;text-underline-offset:3px}
+
+/* footer / contact */
+.contact{border-top:1px solid var(--rule);padding-block:clamp(40px,7vw,72px);display:grid;grid-template-columns:1fr 1fr;gap:32px}
+.contact h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,3.6vw,2.5rem);margin:0 0 .3em;line-height:1.1}
+.contact p{color:var(--muted);margin:0 0 1em;max-width:44ch}
+.tour{background:var(--glass-soft);padding:24px;align-self:start;min-width:0}
+.tour .eyebrow{display:block;margin-bottom:6px}
+.tour strong{font-family:var(--serif);font-weight:400;font-size:1.35rem;display:block;margin-bottom:6px}
+footer{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacing:.05em;padding-block:20px 36px;border-top:1px solid var(--rule)}
+
+/* lightbox + inquiry sheet */
+.overlay{position:fixed;inset:0;background:rgba(10,16,17,.82);display:flex;align-items:center;justify-content:center;padding:20px;z-index:20}
+.lb{max-width:min(900px,100%);max-height:100%;display:flex;flex-direction:column;gap:10px;align-items:center}
+.lb img{max-height:80vh;width:auto;max-width:100%;object-fit:contain}
+.lb p{color:#e7ebe6;font-family:var(--mono);font-size:.8rem;margin:0;text-align:center}
+.close{position:fixed;top:calc(14px + env(safe-area-inset-top,0px));right:16px;font:500 .9rem var(--sans);background:#e7ebe6;color:#1c2729;border:0;padding:.5em 1em;cursor:pointer}
+.sheet{background:var(--panel);color:var(--ink);max-width:460px;width:100%;padding:28px}
+.sheet h3{font-family:var(--serif);font-weight:400;font-size:1.5rem;margin:.2em 0 .5em}
+.sheet p{margin:0 0 1em;color:var(--muted)}
+.msg{font-family:var(--mono);font-size:.82rem;background:var(--wall);padding:12px;border:1px solid var(--rule);user-select:all;white-space:pre-wrap;overflow-wrap:anywhere}
+.row{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.phone{font-family:var(--mono);font-size:1.05rem;color:var(--ink)}
+.phone a{color:var(--glass)}
+.toast{font-family:var(--mono);font-size:.78rem;color:var(--glass);min-height:1.2em;margin-top:8px}
+
+@media (max-width:900px){.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.hero{grid-template-columns:1fr}.hero-piece{max-width:440px}}
+@media (max-width:620px){.grid{grid-template-columns:1fr}.walltext,.contact{grid-template-columns:1fr}.coords{display:none}}
+@media (prefers-reduced-motion:reduce){.piece img{transition:none}}
+</style>
+
+<div class="wrap">
+  <header class="mast">
+    <a class="mark" href="/" style="color:inherit;text-decoration:none">Found on Amelia</a>
+    <span class="coords">30.67° N · 81.46° W · FERNANDINA BEACH, FL</span>
+  </header>
+
+  <section class="hero">
+    <div>
+      <span class="eyebrow">Shell art by Tim · Amelia Island native</span>
+      <h1>Every piece starts on a <em>morning walk</em> down the beach.</h1>
+      <p class="lede">Tim walks the Amelia Island shoreline the way other people read the paper. The cockles, oysters, whelks and driftwood he carries home become one-of-a-kind mirrors and wall pieces, set in paint and epoxy and finished by hand.</p>
+      <div class="hero-cta">
+        <a class="btn" href="#collection">See the collection</a>
+        <a class="btn ghost" href="#contact">Ask about a piece</a>
+      </div>
+    </div>
+    <figure class="hero-piece">
+      <img id="heroImg" alt="A horseshoe crab shell mounted on a blue and green resin pour above a bed of crushed shells">
+      <figcaption>AI-001 · Old Soul of the Tideline</figcaption>
+    </figure>
+  </section>
+
+  <section class="walltext" aria-labelledby="about">
+    <h2 id="about">From the tideline to the wall</h2>
+    <div class="body">
+      <p>Nothing here is bought by the bag. Every shell was picked up by hand on Amelia Island, usually on the same walks Tim has taken for years. Some pieces hold hundreds of tiny coquinas. Others are built around a single find, like a horseshoe crab molt or a whelk the tide left whole.</p>
+      <p>When he isn't on the beach, Tim runs Amelia Island Tours, leading history and haunted walking tours through Fernandina. The same love of this island's stories shows up in the art: shipwrecks, sea turtles, and the faith that runs deep in this town.</p>
+      <ul class="materials" aria-label="Materials">
+        <li>Hand-collected shells</li><li>Driftwood</li><li>Sea glass</li><li>Acrylic pour</li><li>Epoxy resin</li><li>Found trinkets</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="collection">
+    <div class="coll-head">
+      <h2>The Collection</h2>
+      <div class="filters" role="group" aria-label="Filter pieces">
+        <button type="button" data-f="all" aria-pressed="true">All</button>
+        <button type="button" data-f="mirror" aria-pressed="false">Mirrors</button>
+        <button type="button" data-f="wall" aria-pressed="false">Wall pieces</button>
+        <button type="button" data-f="faith" aria-pressed="false">Faith</button>
+      </div>
+    </div>
+    <div class="grid" id="grid"></div>
+  </section>
+
+  <section class="contact" id="contact">
+    <div>
+      <h2>Bring a piece of the island home.</h2>
+      <p>Every piece is one of a kind. Once it sells, it's gone. Tap “Ask about this piece” under anything you like and text Tim the message it gives you, or catch him in person on one of his tours.</p>
+      <p class="phone">Text Tim: <a href="sms:+1TIMPHONE_E164">TIMPHONE_DISPLAY</a></p>
+      <p>Local pickup in Fernandina Beach. Shipping available on request.</p>
+    </div>
+    <div class="tour">
+      <span class="eyebrow">Meet the artist</span>
+      <strong>Amelia Island Tours</strong>
+      <p style="margin:0 0 14px;color:var(--muted)">History and haunted walking tours through historic Fernandina, led by Tim.</p>
+      <a class="btn" href="https://ameliaislandtours.co" target="_blank" rel="noopener">ameliaislandtours.co</a>
+    </div>
+  </section>
+
+  <footer><a href="/">Amelia Island Tours</a> · © 2026 Found on Amelia · All shells hand-collected on Amelia Island, Florida</footer>
+</div>
+
+<div class="overlay" id="lb" hidden>
+  <button class="close" type="button" id="lbClose">Close</button>
+  <div class="lb"><img id="lbImg" alt=""><p id="lbCap"></p></div>
+</div>
+
+<div class="overlay" id="ask" hidden>
+  <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="askTitle">
+    <span class="eyebrow" id="askAcc"></span>
+    <h3 id="askTitle"></h3>
+    <p>Copy this message and text it to Tim at <strong>TIMPHONE_DISPLAY</strong>.</p>
+    <div class="msg" id="askMsg"></div>
+    <div class="row">
+      <button class="btn" type="button" id="copyBtn">Copy message</button>
+      <a class="btn ghost" id="smsBtn" href="sms:+1TIMPHONE_E164">Open text message</a>
+      <button class="btn ghost" type="button" id="askClose">Done</button>
+    </div>
+    <div class="toast" id="toast" aria-live="polite"></div>
+  </div>
+</div>
+
+<script>
+const IMG={"turtle-mirror":"img/turtle-mirror.jpg","three-tides":"img/three-tides.jpg","pink-tide":"img/pink-tide.jpg","horseshoe":"img/horseshoe.jpg","beachcomber":"img/beachcomber.jpg","driftwood-mirror":"img/driftwood-mirror.jpg","cross-low-tide":"img/cross-low-tide.jpg","oyster-mirror":"img/oyster-mirror.jpg","sacred-heart":"img/sacred-heart.jpg","cockle-column":"img/cockle-column.jpg","dropping-in":"img/dropping-in.jpg","longhorn-cross":"img/longhorn-cross.jpg","shipwreck-cove":"img/shipwreck-cove.jpg"};
+const pieces=[
+ {id:"AI-001",t:"Old Soul of the Tideline",img:"horseshoe",cat:["wall"],price:450,m:"Horseshoe crab molt, cockle shells and crushed shell on an acrylic pour, sealed in epoxy",alt:"Horseshoe crab on a blue resin sea with a trail of cockle shells"},
+ {id:"AI-002",t:"Sea Turtle Crossing",img:"turtle-mirror",cat:["mirror"],price:450,m:"Wall mirror. Oyster, whelk, cockle and cowrie shells, hand-painted sea turtle, teal epoxy surf",alt:"Large rectangular mirror framed in shells with a teal resin wave and painted sea turtle"},
+ {id:"AI-003",t:"Sacred Heart of the Shore",img:"sacred-heart",cat:["wall","faith"],price:295,m:"Sculpted flaming heart and cross, whelk and oyster shells, glass beads, sand and epoxy",alt:"Red flaming heart with crown of thorns and cross surrounded by shells"},
+ {id:"AI-004",t:"Oyster Bed",img:"oyster-mirror",cat:["mirror"],price:550,m:"Wall mirror framed in layered oyster shells, sealed in clear epoxy",alt:"Square mirror with a thick frame of stacked oyster shells"},
+ {id:"AI-005",t:"Three Tides",img:"three-tides",cat:["wall"],price:350,m:"Set of three panels. Jellyfish, dolphins and a scallop, with crushed shell, sea glass and acrylic pour",alt:"Three stacked panels showing jellyfish, dolphins and a large scallop shell"},
+ {id:"AI-006",t:"Driftwood Mirror",img:"driftwood-mirror",cat:["mirror"],price:450,m:"Floor mirror. Driftwood, oyster and cockle shells, natural rope",alt:"Tall standing mirror framed in weathered driftwood and shells with a rope hanger"},
+ {id:"AI-007",t:"Dropping In",img:"dropping-in",cat:["wall"],price:175,m:"Textured acrylic and glitter epoxy on canvas, sculpted surfer, gold shell shoreline",alt:"Orange sky with a breaking blue wave and a small surfer"},
+ {id:"AI-008",t:"Cross at Low Tide",img:"cross-low-tide",cat:["wall","faith"],price:225,m:"Cross of cockle shells on a pink and teal pour, crushed shell border, dolphin trinkets",alt:"Tall panel with a cross made of small shells on a pink and blue swirl"},
+ {id:"AI-009",t:"Cockle Column",img:"cockle-column",cat:["mirror"],price:450,m:"Tall wall mirror. Double row of cockle shells, starfish, teal resin wave at the base",alt:"Tall narrow mirror framed in two rows of cockle shells with starfish"},
+ {id:"AI-010",t:"Shipwreck Cove",img:"shipwreck-cove",cat:["wall"],price:195,m:"Driftwood, model ship, crab claw, oyster shell and sea turtle over a blue resin cove",alt:"Small ship and driftwood branch on a blue resin cove ringed with shells"},
+ {id:"AI-011",t:"Where the Desert Meets the Shore",img:"longhorn-cross",cat:["wall","faith"],price:225,m:"Longhorn skull and crushed-shell cross, glass beads, resin flowers, green and coral pour",alt:"Cross of crushed shells with a longhorn skull on a green marbled background"},
+ {id:"AI-012",t:"Beachcomber's Inventory",img:"beachcomber",cat:["wall"],price:175,m:"Calico scallops, coquinas, whelks and fossil fragments set in white sand and epoxy",alt:"White panel covered in dozens of small colorful shells around a central whelk"},
+ {id:"AI-013",t:"Pink Tide",img:"pink-tide",cat:["wall"],price:95,m:"Crab shell and scallops coated in a pink, teal and lavender pour",alt:"Pink and teal marbled canvas with raised paint-covered shells"}
+];
+heroImg.src=IMG.horseshoe;
+const fmt=n=>"$"+n.toLocaleString("en-US");
+const grid=document.getElementById("grid");
+grid.innerHTML=pieces.map((p,i)=>`
+ <article class="piece" data-cat="${p.cat.join(" ")}">
+  <button class="hang" type="button" data-i="${i}" aria-label="View ${p.t} larger">
+   <img src="${IMG[p.img]}" alt="${p.alt}" loading="${i<3?"eager":"lazy"}">
+  </button>
+  <div class="placard">
+   <span class="acc">${p.id} · Amelia Island, 2026</span>
+   <h3>${p.t}</h3><span class="price">${fmt(p.price)}</span>
+   <p class="medium">${p.m}</p>
+   <button class="inq" type="button" data-ask="${i}">Ask about this piece</button>
+  </div>
+ </article>`).join("");
+
+document.querySelectorAll(".filters button").forEach(b=>b.addEventListener("click",()=>{
+  document.querySelectorAll(".filters button").forEach(x=>x.setAttribute("aria-pressed",x===b));
+  const f=b.dataset.f;
+  grid.querySelectorAll(".piece").forEach(el=>{el.hidden=!(f==="all"||el.dataset.cat.split(" ").includes(f))});
+}));
+
+const lb=document.getElementById("lb"),ask=document.getElementById("ask");
+grid.addEventListener("click",e=>{
+  const h=e.target.closest("[data-i]"),a=e.target.closest("[data-ask]");
+  if(h){const p=pieces[h.dataset.i];lbImg.src=IMG[p.img];lbImg.alt=p.alt;lbCap.textContent=`${p.id} · ${p.t} · ${fmt(p.price)}`;lb.hidden=false;lbClose.focus()}
+  if(a){const p=pieces[a.dataset.ask];askAcc.textContent=p.id;askTitle.textContent=p.t;
+    askMsg.textContent=`Hi Tim! I saw "${p.t}" (${p.id}, ${fmt(p.price)}) on Found on Amelia and I'm interested. Is it still available?`;
+    toast.textContent="";smsBtn.href='sms:+1TIMPHONE_E164?&body='+encodeURIComponent(askMsg.textContent);ask.hidden=false;copyBtn.focus()}
+});
+const shut=()=>{lb.hidden=true;ask.hidden=true};
+lbClose.onclick=shut;askClose.onclick=shut;
+[lb,ask].forEach(o=>o.addEventListener("click",e=>{if(e.target===o)shut()}));
+document.addEventListener("keydown",e=>{if(e.key==="Escape")shut()});
+copyBtn.onclick=()=>{
+  const t=askMsg.textContent;
+  try{navigator.clipboard.writeText(t).then(()=>toast.textContent="Copied. Paste it into a text to Tim.",sel)}catch(_){sel()}
+  function sel(){const r=document.createRange();r.selectNodeContents(askMsg);const s=getSelection();s.removeAllRanges();s.addRange(r);toast.textContent="Selected. Copy it with your device's copy command."}
+};
+</script>
+</body>
+</html>
