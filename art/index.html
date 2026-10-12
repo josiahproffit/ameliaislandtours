@@ -163,7 +163,7 @@ footer{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacin
     <div>
       <h2>Bring a piece of the island home.</h2>
       <p>Every piece is one of a kind. Once it sells, it's gone. Tap “Ask about this piece” under anything you like and text Tim the message it gives you, or catch him in person on one of his tours.</p>
-      <p class="phone">Text Tim: <a href="sms:+1TIMPHONE_E164">TIMPHONE_DISPLAY</a></p>
+      <p class="phone">Text Tim: <a href="sms:+19044159019">(904) 415-9019</a></p>
       <p>Local pickup in Fernandina Beach. Shipping available on request.</p>
     </div>
     <div class="tour">
@@ -186,11 +186,11 @@ footer{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacin
   <div class="sheet" role="dialog" aria-modal="true" aria-labelledby="askTitle">
     <span class="eyebrow" id="askAcc"></span>
     <h3 id="askTitle"></h3>
-    <p>Copy this message and text it to Tim at <strong>TIMPHONE_DISPLAY</strong>.</p>
+    <p>Copy this message and text it to Tim at <strong>(904) 415-9019</strong>.</p>
     <div class="msg" id="askMsg"></div>
     <div class="row">
       <button class="btn" type="button" id="copyBtn">Copy message</button>
-      <a class="btn ghost" id="smsBtn" href="sms:+1TIMPHONE_E164">Open text message</a>
+      <a class="btn ghost" id="smsBtn" href="sms:+19044159019">Open text message</a>
       <button class="btn ghost" type="button" id="askClose">Done</button>
     </div>
     <div class="toast" id="toast" aria-live="polite"></div>
@@ -242,7 +242,7 @@ grid.addEventListener("click",e=>{
   if(h){const p=pieces[h.dataset.i];lbImg.src=IMG[p.img];lbImg.alt=p.alt;lbCap.textContent=`${p.id} · ${p.t} · ${fmt(p.price)}`;lb.hidden=false;lbClose.focus()}
   if(a){const p=pieces[a.dataset.ask];askAcc.textContent=p.id;askTitle.textContent=p.t;
     askMsg.textContent=`Hi Tim! I saw "${p.t}" (${p.id}, ${fmt(p.price)}) on Found on Amelia and I'm interested. Is it still available?`;
-    toast.textContent="";smsBtn.href='sms:+1TIMPHONE_E164?&body='+encodeURIComponent(askMsg.textContent);ask.hidden=false;copyBtn.focus()}
+    toast.textContent="";smsBtn.href='sms:+19044159019?&body='+encodeURIComponent(askMsg.textContent);ask.hidden=false;copyBtn.focus()}
 });
 const shut=()=>{lb.hidden=true;ask.hidden=true};
 lbClose.onclick=shut;askClose.onclick=shut;
