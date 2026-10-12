@@ -63,6 +63,14 @@ h1 em{font-style:normal;color:var(--glass)}
 .walltext h2{font-family:var(--serif);font-weight:400;font-size:1.6rem;line-height:1.15;margin:0}
 .walltext .body{min-width:0;max-width:62ch}
 .walltext p{margin:0 0 1em}
+.artist{display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1.2fr);gap:clamp(24px,5vw,64px);align-items:start;padding-block:clamp(40px,7vw,72px);border-top:1px solid var(--rule)}
+.artist .portrait{margin:0;min-width:0}
+.artist .portrait img{display:block;width:100%;aspect-ratio:4/5;object-fit:cover;box-shadow:0 30px 60px -30px rgba(20,35,35,.35)}
+.artist .portrait figcaption{font-family:var(--mono);font-size:.75rem;color:var(--muted);margin-top:10px;letter-spacing:.04em}
+.artist .body{min-width:0;max-width:62ch}
+.artist h2{font-family:var(--serif);font-weight:400;font-size:clamp(1.8rem,3.6vw,2.5rem);line-height:1.1;margin:.3em 0 .6em;text-wrap:balance}
+.artist p{margin:0 0 1em}
+@media (max-width:760px){.artist{grid-template-columns:1fr}.artist .portrait{max-width:380px}}
 .materials{display:flex;flex-wrap:wrap;gap:8px;margin-top:6px;padding:0;list-style:none}
 .materials li{font-family:var(--mono);font-size:.75rem;letter-spacing:.05em;padding:.35em .75em;border:1px solid var(--rule);background:var(--panel)}
 
@@ -135,11 +143,17 @@ footer{font-family:var(--mono);font-size:.72rem;color:var(--muted);letter-spacin
     </figure>
   </section>
 
-  <section class="walltext" aria-labelledby="about">
-    <h2 id="about">From the tideline to the wall</h2>
+  <section class="artist" aria-labelledby="about">
+    <figure class="portrait">
+      <img src="img/tim.jpg" alt="Tim smiling on the water with the Amelia Island salt marsh behind him" loading="lazy">
+      <figcaption>Tim, out on the marsh</figcaption>
+    </figure>
     <div class="body">
-      <p>Nothing here is bought by the bag. Every shell was picked up by hand on Amelia Island, usually on the same walks Tim has taken for years. Some pieces hold hundreds of tiny coquinas. Others are built around a single find, like a horseshoe crab molt or a whelk the tide left whole.</p>
-      <p>When he isn't on the beach, Tim runs Amelia Island Tours, leading history and haunted walking tours through Fernandina. The same love of this island's stories shows up in the art: shipwrecks, sea turtles, and the faith that runs deep in this town.</p>
+      <span class="eyebrow">Meet the artist</span>
+      <h2 id="about">Tim, a lifelong student of this island</h2>
+      <p>Tim is a longtime local who grew up walking the streets of Fernandina, listening to the old-timers on their porches and chasing down the stories the guidebooks never bothered to tell. These days he shares those stories as the guide behind Amelia Island Tours. His art comes from the same place.</p>
+      <p>Most mornings start with a walk on the beach. Tim picks up what the tide leaves behind: cockles and coquinas, oyster clusters, a whelk that washed in whole, a horseshoe crab molt, a piece of driftwood with just the right curve. Back home, those finds become mirrors and wall pieces, set in paint and epoxy and finished with small trinkets that each carry a story. Nothing here is bought by the bag.</p>
+      <p>He builds a piece the way he tells a story about the eight flags that flew over this island: with patience, a deep love for where it came from, and usually a little humor tucked in somewhere. Ask him about any piece and he'll happily tell you which beach it came from and what he was thinking when he made it.</p>
       <ul class="materials" aria-label="Materials">
         <li>Hand-collected shells</li><li>Driftwood</li><li>Sea glass</li><li>Acrylic pour</li><li>Epoxy resin</li><li>Found trinkets</li>
       </ul>
